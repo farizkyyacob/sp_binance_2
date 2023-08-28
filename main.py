@@ -13,7 +13,17 @@ exchange = exchange_class({
         'defaultType': 'future', },
 })
 
-
 x = exchange.fetch_balance(params={'type': 'future'})
-first_order = x["info"]['totalWalletBalance']
-print(first_order)
+wallet_balance = x["info"]
+floating_info = x["info"]
+futures_wallet = x["info"]
+print("wallet_balance : ",wallet_balance)
+print("Floating Info : ",floating_info)
+print("Futures Wallet Info : ", futures_wallet)
+
+
+#x = exchange.publicGetExchangeInfo()
+#x =exchange.markets["LTC/USDT"]
+#print(x)
+#for a in x:
+#    print(a)
